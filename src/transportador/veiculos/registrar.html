@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registrar Veículo - EmbarqueAi</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-white-box">
+        <img src="../../assets/imgs/logo.png" />
+      </div>
+      <a href="../../auth/login.html" class="btn-sair">Sair</a>
+    </header>
+
+    <a
+      href="listagem.html"
+      class="btn-back"
+      style="position: absolute; left: 20px; top: 100px"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/271/271220.png"
+        width="30"
+      />
+    </a>
+
+    <div class="page-title">Registrar Veículo</div>
+
+    <main class="card-azul">
+      <div class="label-orange">Tipo de Veículo</div>
+      <input
+        type="text"
+        class="input-field"
+        placeholder="Digite o tipo de veículo"
+      />
+
+      <div class="label-orange">Placa</div>
+      <input type="text" class="input-field" placeholder="Placa do Veículo" />
+
+      <div class="label-orange">Foto do Veículo</div>
+      <div
+        style="
+          background: white;
+          border-radius: 12px;
+          padding: 10px;
+          margin-bottom: 20px;
+        "
+      >
+        <label
+          for="foto-upload"
+          style="
+            cursor: pointer;
+            color: #5599e6;
+            font-weight: bold;
+            font-size: 14px;
+          "
+        >
+          Clique para enviar
+        </label>
+        <input type="file" id="foto-upload" style="display: none" />
+      </div>
+
+      <button class="btn-action" style="width: 100%">Registrar</button>
+    </main>
+
+    <script src="../../assets/js/script.js"></script>
+  </body>
+</html>

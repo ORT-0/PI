@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grupos - Transportador</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-white-box">
+        <img src="../assets/imgs/logo.png" />
+      </div>
+      <a href="../auth/login.html" class="btn-sair">Sair</a>
+    </header>
+
+    <a
+      href="javascript:history.back()"
+      class="btn-back"
+      style="position: absolute; left: 20px; top: 100px"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/271/271220.png"
+        width="30"
+      />
+    </a>
+
+    <h1 class="page-title">Grupos</h1>
+
+    <main class="card-azul">
+      <div class="item-card">
+        <div class="label-orange">Teste para Navegação</div>
+        <a
+          href="detalhes.html"
+          class="btn-visualizar"
+          style="
+            text-decoration: none;
+            color: black;
+            display: block;
+            margin-top: 10px;
+            background: #f5a623;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+          "
+          >Visualizar</a
+        >
+      </div>
+
+      <button class="btn-add" onclick="abrirModal('modalGrupo')">+</button>
+    </main>
+
+    <div id="modalGrupo" class="overlay">
+      <div class="modal">
+        <h3 style="color: white">Novo Grupo</h3>
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Nome do Grupo"
+          style="color: #333"
+        />
+        <select class="input-field" style="color: #333">
+          <option>Nenhum veículo registrado</option>
+        </select>
+        <button class="btn-action" onclick="fecharModal('modalGrupo')">
+          Criar
+        </button>
+        <button
+          class="btn-action"
+          style="background: #ccc; color: #333; margin-top: 10px"
+          onclick="fecharModal('modalGrupo')"
+        >
+          Cancelar
+        </button>
+      </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

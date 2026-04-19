@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Acompanhar Trajeto - EmbarqueAi</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-white-box">
+        <img src="/assets/imgs/logo.png" alt="Busafe" />
+      </div>
+      <a href="login.html" class="btn-sair">Sair</a>
+    </header>
+
+    <a
+      href="javascript:history.back()"
+      class="btn-back"
+      style="position: absolute; left: 20px; top: 100px"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/271/271220.png"
+        width="30"
+      />
+    </a>
+
+    <div class="page-title">Acompanhar Trajeto</div>
+
+    <main class="card-azul">
+      <div class="stats-container">
+        <div class="stat-box">
+          <span class="stat-label">Tempo de Viagem</span>
+          <span class="stat-value">00:12:40</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Chegada em aprox.</span>
+          <span class="stat-value">8 min</span>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: #333;
+          height: 220px;
+          border-radius: 15px;
+          border: 2px solid orange;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          position: relative;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            width: 30px;
+            height: 30px;
+            background: orange;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            z-index: 2;
+          "
+        ></div>
+        <p
+          style="
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 15px;
+            z-index: 2;
+          "
+        >
+          VEÍCULO EM MOVIMENTO
+        </p>
+        <p style="color: #aaa; font-size: 11px; z-index: 2">
+          Atualizado agora mesmo
+        </p>
+
+        <div
+          style="
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient(#444 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+          "
+        ></div>
+      </div>
+
+      <div class="label-orange">Status da Rota</div>
+      <p style="color: white; font-weight: bold; margin-bottom: 10px">
+        Rota: Manhã - Escola Central
+      </p>
+      <p style="color: #eee; font-size: 14px; margin-bottom: 20px">
+        O motorista está a caminho do próximo ponto.
+      </p>
+
+      <div class="label-orange">Destino Final</div>
+      <p style="color: white">Escola Municipal Santa Maria</p>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

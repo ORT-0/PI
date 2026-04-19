@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Detalhes do Grupo - Transportador</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-white-box">
+        <img src="../assets/imgs/logo.png" />
+      </div>
+      <a href="../auth/login.html" class="btn-sair">Sair</a>
+    </header>
+
+    <a
+      href="javascript:history.back()"
+      class="btn-back"
+      style="position: absolute; left: 20px; top: 100px"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/271/271220.png"
+        width="30"
+      />
+    </a>
+
+    <h1 class="page-title">[Nome do Grupo]</h1>
+
+    <div class="card-azul" style="margin-bottom: 20px">
+      <div class="label-orange">Foto do Veículo</div>
+      <div
+        class="van-img-container"
+        style="
+          background: #eee;
+          height: 150px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <span style="color: #999">Sem imagem disponível</span>
+      </div>
+    </div>
+
+    <div class="card-azul">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <button
+          class="btn-add"
+          style="margin: 0"
+          onclick="abrirModal('modalMembro')"
+        >
+          +
+        </button>
+        <div class="label-orange" style="margin: 0">Membros</div>
+      </div>
+
+      <p style="color: white; margin-top: 20px; font-style: italic">
+        Nenhum membro listado.
+      </p>
+    </div>
+
+    <div id="modalMembro" class="overlay">
+      <div class="modal">
+        <h3 style="color: white">Convidar Membro</h3>
+        <input
+          type="email"
+          class="input-field"
+          placeholder="E-mail do Passageiro/Responsável"
+          style="color: #333"
+        />
+        <button class="btn-action" onclick="fecharModal('modalMembro')">
+          Enviar Convite
+        </button>
+        <button
+          class="btn-action"
+          style="background: #ccc; color: #333; margin-top: 10px"
+          onclick="fecharModal('modalMembro')"
+        >
+          Cancelar
+        </button>
+      </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

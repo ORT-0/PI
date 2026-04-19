@@ -1,0 +1,573 @@
+:root {
+  --blue-header: #4a90e2; /*Barra superior /
+  --blue-form: #5599e6; /*Cards e Dashboard*/
+  --orange-accent: #f5a623; /*Botões, Labels e Tags*/
+  --white: #ffffff;
+  --dark-text: #333333;
+  --shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*CABEÇALHO (HEADER)*/
+header {
+  width: 100%;
+  background-color: var(--blue-header);
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+.logo-white-box {
+  background-color: var(--white);
+  padding: 5px 25px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-white-box img {
+  height: 45px;
+  display: block;
+}
+
+.btn-sair {
+  position: absolute;
+  right: 20px;
+  color: #cce0ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* E BOTÕES DE VOLTAR*/
+.page-title {
+  background-color: var(--orange-accent);
+  color: var(--dark-text);
+  padding: 12px 60px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  border: 1px solid #333;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.btn-back {
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-back:hover {
+  transform: scale(1.1);
+}
+
+/*CARDS PRINCIPAIS (LOGIN / DASHBOARD / GRUPOS)*/
+.card-azul {
+  background-color: var(--blue-form);
+  padding: 30px 20px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*DASHBOARD E PERFIL*/
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  border: 3px solid #555;
+  margin-bottom: 15px;
+  object-fit: cover;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/149/149071.png"); /*Ícone padrão de usuário*/
+  background-size: cover;
+}
+
+.user-name-tag {
+  background-color: var(--orange-accent);
+  padding: 6px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #333;
+  box-shadow: var(--shadow);
+}
+
+.btn-menu {
+  background-color: var(--orange-accent);
+  color: var(--dark-text);
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #333;
+  display: block;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 0px #d48a0a; /*Efeito de profundidade*/
+  transition: 0.2s;
+}
+
+.btn-menu:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/*FORMULÁRIOS E INPUTS*/
+.label-orange {
+  background-color: var(--orange-accent);
+  color: var(--dark-text);
+  width: 85%;
+  margin: 0 auto 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px 0;
+  border: 1px solid #333;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.btn-action {
+  background-color: var(--orange-accent);
+  border: 1px solid #333;
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+  box-shadow: var(--shadow);
+}
+
+/*LISTAGENS, GRUPOS E MEMBROS*/
+.item-card {
+  background-color: var(--orange-accent);
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 15px;
+  position: relative;
+  border: 1px solid #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-delete {
+  background-color: #ff4d4d;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-visualizar {
+  background-color: #ffcc80;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 6px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-add {
+  background-color: var(--orange-accent);
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+}
+
+.van-img-container {
+  background: #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*OVERLAY E MODAL*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--blue-form);
+  padding: 25px;
+  border-radius: 20px;
+  width: 280px;
+  border: 2px solid white;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/*TEXTOS AUXILIARES*/
+.helper-text {
+  color: white;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.helper-text a {
+  color: #cce0ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-visualizar {
+  background-color: #ffcc80;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 6px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+/*ESTILOS DE PERFIL*/
+.profile-header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 25px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  border: 4px solid var(--orange); /* Use a variável se tiver, ou #ffa500 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*Diferenciação de cor para o avatar do passageiro*/
+.avatar-passenger {
+  border-color: #00d4ff;
+}
+
+.info-group {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-left: 4px solid orange;
+}
+
+.info-group.blue {
+  border-left-color: #00d4ff;
+}
+
+.info-label {
+  color: orange;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-label.blue {
+  color: #00d4ff;
+}
+
+.info-value {
+  color: white;
+  font-size: 16px;
+}
+
+/*ESTILOS DE TRAJETO (STATS)*/
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.stat-value {
+  color: orange;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+}
+
+.stat-label {
+  color: white;
+  font-size: 0.8em;
+}
+
+/*ANIMAÇÃO GPS*/
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 165, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 165, 0, 0);
+  }
+}
+
+.gps-dot {
+  width: 30px;
+  height: 30px;
+  background: orange;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Container de informações do perfil */
+.info-group {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-left: 4px solid #00d4ff; /* Azul para passageiro */
+}
+
+.info-group.orange {
+  border-left-color: orange; /* Laranja para transportador/emergência */
+}
+
+.info-label {
+  color: #00d4ff;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-label.orange {
+  color: orange;
+}
+
+.info-value {
+  color: white;
+  font-size: 16px;
+}
+
+/*Estilos Gerais de Perfil*/
+.profile-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  background: #444;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  border: 4px solid orange;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-name {
+  color: white;
+  font-size: 22px;
+  margin: 5px 0;
+}
+
+.profile-role {
+  color: #00d4ff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  display: block;
+}
+
+/* Blocos de Informação*/
+.info-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+  border-left: 4px solid orange;
+}
+
+.info-box .label {
+  color: orange;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.info-box .value {
+  color: white;
+  font-size: 16px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.stat-value {
+  color: orange;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+}
+
+.stat-label {
+  color: white;
+  font-size: 0.8em;
+}
+
+/* Animação de pulso para o GPS */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 165, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 165, 0, 0);
+  }
+}
+
+/*Estilo para Celular*/
+@media (max-width: 768px) {
+  .card-azul {
+    width: 95%;
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .page-title {
+    font-size: 20px;
+    margin-top: 60px;
+  }
+
+  .btn-action {
+    width: 100%;
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+/*TEXTOS AUXILIARES - LOGIN E CADASTRO*/
+.helper-text {
+  color: #5a5a5a;
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.helper-text a {
+  color: #26c1e0;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.helper-text a:hover {
+  color: #1486bf;
+  border-bottom: 1px solid #ffffff;
+}
