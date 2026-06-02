@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embarquei - Registrar Veículo</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/script.js" defer></script>
+</head>
+<body class="page-veiculos">
+  <main class="app">
+    <header class="top"><a href="../auth/index.html" aria-label="Ir para início"><img class="logo" src="../assets/imgs/logo-embarqueai.svg" alt="EmbarqueAi"></a></header>
+    <a class="logout" href="../auth/index.html">Sair <span>↪</span></a>
+    <span class="dots-left" aria-hidden="true"></span><span class="dots-right" aria-hidden="true"></span>
+    <a class="back" href="transportadora-perfil.html"><span class="back-icon" aria-hidden="true">&#8249;</span><span>VOLTAR</span></a>
+    <section class="stage">
+      <div>
+        <h1 class="title">Registrar veículo</h1>
+        <div class="line"></div>
+        <form class="card" action="transportadora-perfil.html">
+          <label for="tipo">Tipo de Veículo</label>
+          <select class="select" id="tipo" name="tipo" required>
+            <option value="" selected disabled>Selecione o Tipo</option>
+            <option value="carro">Carro</option>
+            <option value="van">Van</option>
+            <option value="onibus">Onibus</option>
+          </select>
+          <label for="placa">Placa</label>
+          <input class="input" id="placa" name="placa" placeholder="Digite aqui a placa do veículo">
+          <label for="foto">Foto do Veículo</label>
+          <label class="upload" for="foto">Clique aqui para enviar<input id="foto" name="foto" type="file" accept="image/*"></label>
+          <button class="button" type="submit">Registrar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
